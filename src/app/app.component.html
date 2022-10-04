@@ -6,23 +6,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Productos</a>
-        <a class="nav-link" href="#">Contacto</a>
-        <a class="nav-link disabled">Algo mas</a>
+        <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
+        <a class="nav-link" [routerLink]="['/beers']">Productos</a>
+        <a class="nav-link" [routerLink]="['/about']">Contacto</a>
       </div>
     </div>
   </div>
 </nav>
 <div class="container">
-  <div class="row">
-    <div class="col-8">
-      <app-beer-list></app-beer-list>
-    </div>
-    <div class="col-4">
-      <app-beer-cart></app-beer-cart>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 </div>
 
 <footer> {{title}} 2022</footer>
